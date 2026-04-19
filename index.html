@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITA Consulting</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span class="contact-info">
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/23674563406" target="_blank">+236 74 56 34 06</a>
+            </span>
+            <span class="contact-info">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:itaconsulting236@gmail.com">itaconsulting236@gmail.com</a>
+            </span>
+        </div>
+        <div class="top-right">
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Bangui, RCA
+            </span>
+            <a href="https://www.facebook.com/61578409476303" class="social">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/ita_consulting236/" class="social">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ita-consulting-236/" class="social">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="site-header">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <!-- Logo brand -->
+            <a class="brand" href="#accueil">
+                <img src="images/ITAC_logo.jpg" alt="Logo ITA Consulting" class="logo-img" />
+                <div>
+                    <p class="brand-name">ITA Consulting</p>
+                    <p class="brand-sub" data-i18n="tagline">Etudes et Soins a l'etranger</p>
+                </div>
+            </a>
+            <!-- Menu -->
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#destination">Destination</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Button -->
+            <a href="#contact" class="btn-contact">
+                Prendre rendez-vous
+            </a>
+            <!-- Hamburger -->
+            <div class="hamburger">
+                ☰
+            </div>
+        </nav>
+    </header>
+        <section class="hero-slider">
+            <div class="slides">
+                <!-- HERO 1 : ETUDES -->
+                <div class="slide active" style="background-image: url('images/bg-study.jpg');">
+                    <div class="hero-content">
+                        <!-- Texte droite -->
+                        <div class="hero-text">
+                            <h1>
+                                Étudiez à l'étranger avec
+                                <span>ITA Consulting</span>
+                            </h1>
+                            <p>
+                                Nous vous accompagnons
+                                dans tous les démarches pour poursuivre vos
+                                études dans les meilleures universités.
+                            </p>
+                            <a href="#" class="hero-btn">
+                                Commencer maintenant
+                            </a>
+                        </div>
+                        <!-- Image personnage gauche -->
+                        <div class="hero-image">
+                            <img src="images/hero_study_img.png" alt="Étudiante africaine" class="hero-image-study">
+                        </div>
+                    </div>
+                </div>
+                <!-- HERO 2 : MEDICAL -->
+                <div class="slide" style="background-image: url('images/hero_med_img__.png');">
+                    <div class="hero-content">
+
+                        <!-- Texte droite -->
+                        <div class="hero-text"> 
+                            <h1>
+                                Assistance Médicale
+                                <span>Internationale</span>
+                            </h1>
+                            <p>
+                                ITA Consulting facilite votre accès
+                                aux soins médicaux spécialisés
+                                dans les hôpitaux partenaires.
+                            </p>
+                            <a href="#" class="hero-btn">
+                                Demander une assistance
+                            </a>
+                        </div>
+                        <!-- Image personnage gauche -->
+                        <div class="hero-image" >
+                            <img src="images/hero_med_img.png" alt="Assistance médicale" class="hero-image-medical">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <img class="overlay-bottom" src="assets/img/overlay-bottom.png" alt="overlay bottom">
+            <!-- Boutons de navigation
+            <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
+            <button class="slider-btn next-btn" onclick="nextSlide()">❯</button> -->
+        </section>
+        <!-- Section Services -->
+        <section id="services" class="services-section">
+            <h2 class="section-title" data-i18n="services_title">Nos Services</h2>
+            <div class="services-container">
+                <!-- Service 1 : Études à l'étranger -->
+                <div class="service-card">
+                    <i class="fa-solid fa-graduation-cap service-icon"></i>
+                    <h3 data-i18n="service_study_title">Études à l'étranger</h3>
+                    <p data-i18n="service_study_desc">
+                        Accompagnement personnalisé pour les démarches
+                        d'admission et de visa.
+                    </p>
+                </div>
+                <!-- Service 2 : Assistance médicale internationale -->
+                <div class="service-card">
+                    <i class="fa-solid fa-hospital service-icon"></i>
+                    <h3 data-i18n="service_medical_title">Assistance Médicale Internationale</h3>
+                    <p data-i18n="service_medical_desc">
+                        Facilitation de l'accès aux soins médicaux spécialisés
+                        dans les hôpitaux partenaires.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title" data-i18n="about_title">À propos de nous</h2>
+            <p data-i18n="about_desc">
+                ITA Consulting est une entreprise dédiée à l'accompagnement
+                des étudiants africains dans leurs projets d'études à l'étranger
+                et à la facilitation de l'accès aux soins médicaux internationaux.
+                Notre mission est de fournir un soutien personnalisé pour aider nos clients
+                à atteindre leurs objectifs académiques et de santé.
+            </p>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
