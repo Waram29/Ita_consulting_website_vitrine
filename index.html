@@ -11,7 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="home">
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-left">
@@ -55,8 +55,8 @@
             <!-- Menu -->
             <ul class="nav-menu">
                 <li><a href="#home">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#destination">Destination</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -127,6 +127,49 @@
             <button class="slider-btn prev-btn" onclick="prevSlide()">❮</button>
             <button class="slider-btn next-btn" onclick="nextSlide()">❯</button> -->
         </section>
+        <!--Section About-->
+        <section id="about" class="about-section">
+            <span class="about-subtitle">Qui sommes-nous?</span>
+            <div class="about-container">
+                <!-- Cartes à gauche -->
+                <div class="about-images">
+                    <img src="images/about-img.jfif" alt="Ita_Consulting_Team">
+                </div>
+
+                <!-- Contenu à droite -->
+                <div class="about-content">
+                    <h2>Une Agence Fondée sur <span>la Confiance & l'Excellence</span></h2>
+
+                    <p class="about-description">
+                        ITA Consulting est née d'une conviction forte : chaque parcours international mérite un accompagnement sur mésure, professionnel et humain.
+                    </p>
+
+                    <p class="about-description">
+                        Qu'il s'agisse d'intégrer une grande université, d'obtenir un visa étudiant ou de gérer une urgence médicale à l'étranger, notre équipe multidisciplinaire est à vos côtés à chaque étape.
+                    </p>
+
+                    <!-- Badges caractéristiques -->
+                    <div class="about-badges">
+                        <span class="badge">
+                            <i class="fas fa-check-circle"></i> Réseau Mondial
+                        </span>
+                        <span class="badge">
+                            <i class="fas fa-check-circle"></i> Suivi Personnalisé
+                        </span>
+                        <span class="badge">
+                            <i class="fas fa-check-circle"></i> Urgence 24h/24
+                        </span>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <a href="#contact" class="about-cta-btn">
+                        Commencer Mon Projet <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>       
         <!-- Section Services -->
         <section id="services" class="services-section">
             <h2 class="section-title" data-i18n="services_title">Nos Services</h2>
