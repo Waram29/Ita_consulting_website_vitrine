@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITA Consulting</title>
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -61,9 +62,9 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Button -->
-            <a href="#contact" class="btn-contact">
+            <!-- <a href="#contact" class="btn-contact">
                 Prendre rendez-vous
-            </a>
+            </a> -->
             <!-- Hamburger -->
             <div class="hamburger">
                 ☰
@@ -138,14 +139,15 @@
 
                 <!-- Contenu à droite -->
                 <div class="about-content">
-                    <h2>Une Agence Fondée sur <span>la Confiance & l'Excellence</span></h2>
+                    <h2>Une agence fondée sur <span>la Confiance & l'Excellence</span></h2>
 
                     <p class="about-description">
                         ITA Consulting est née d'une conviction forte : chaque parcours international mérite un accompagnement sur mésure, professionnel et humain.
                     </p>
 
                     <p class="about-description">
-                        Qu'il s'agisse d'intégrer une grande université, d'obtenir un visa étudiant ou de gérer une urgence médicale à l'étranger, notre équipe multidisciplinaire est à vos côtés à chaque étape.
+                        Qu'il s'agisse d'intégrer une grande université à l'étranger,ou de gérer une urgence médicale au Maroc, notre équipe multidisciplinaire est à vos côtés à chaque étape.
+                        Notre mission est de fournir un soutien personnalisé pour aider nos clients à atteindre leurs objectifs.
                     </p>
 
                     <!-- Badges caractéristiques -->
@@ -169,43 +171,181 @@
 
             </div>
 
-        </section>       
+        </section>
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="120">0</h3>
+                    <p class="stat-text">Étudiants placés</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="12">0</h3>
+                    <p class="stat-text">Universités partenaires</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-user-injured"></i></div>
+                    <h3 class="stat-number" data-target="20">0</h3>
+                    <p class="stat-text">Patients assistés</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-hospital"></i></div>
+                    <h3 class="stat-number" data-target="5">0</h3>
+                    <p class="stat-text">Cliniques & Hôpitaux</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-earth-africa"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="6">0</h3>
+                    <p class="stat-text">Pays couverts</p>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-smile-beam"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="96">0%</h3>
+                    <p class="stat-text">Clients satisfaits</p>
+                </div>
+            </div>
+        </section>    
         <!-- Section Services -->
         <section id="services" class="services-section">
-            <h2 class="section-title" data-i18n="services_title">Nos Services</h2>
-            <div class="services-container">
-                <!-- Service 1 : Études à l'étranger -->
-                <div class="service-card">
-                    <i class="fa-solid fa-graduation-cap service-icon"></i>
-                    <h3 data-i18n="service_study_title">Études à l'étranger</h3>
-                    <p data-i18n="service_study_desc">
-                        Accompagnement personnalisé pour les démarches
-                        d'admission et de visa.
-                    </p>
+            <div class="container">
+                <div class="services-header">
+                    <h2 class="section-title">Deux Pôles d'Excellence, Un Engagement Unique</h2>
+                    <p class="section-subtitle">De la réussite académique à l'assistance médicale, nous sécurisons chaque étape de votre projet pour une sérénité absolue.</p>
                 </div>
-                <!-- Service 2 : Assistance médicale internationale -->
-                <div class="service-card">
-                    <i class="fa-solid fa-hospital service-icon"></i>
-                    <h3 data-i18n="service_medical_title">Assistance Médicale Internationale</h3>
-                    <p data-i18n="service_medical_desc">
-                        Facilitation de l'accès aux soins médicaux spécialisés
-                        dans les hôpitaux partenaires.
-                    </p>
+                <div class="services-tabs-nav">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-etudes')">
+                        <i class="fa-solid fa-graduation-cap"></i> Études à l'Étranger
+                    </button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-medical')">
+                        <i class="fa-solid fa-heart-pulse"></i> Évacuation Médicale
+                    </button>
+                </div>
+
+                <div class="services-tabs-content">
+
+                    <div id="tab-etudes" class="tab-content active">
+                        <div class="service-details-grid">
+                            <div class="detail-card">
+                                <div class="card-num">01</div>
+                                <i class="fa-solid fa-compass detail-icon"></i>
+                                <h3>Orientation et choix d’université</h3>
+                                <p>Analyse de votre profil, aide à la sélection des filières et des établissements les plus adaptés à vos ambitions.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                            <div class="detail-card">
+                                <div class="card-num">02</div>
+                                <i class="fa-solid fa-file-signature detail-icon"></i>
+                                <h3>Préparation des dossiers & assistance visa</h3>
+                                <p>Accompagnement rigoureux pour la constitution de vos dossiers d'admission et de demande de visa étudiant.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                            <div class="detail-card">
+                                <div class="card-num">03</div>
+                                <i class="fa-solid fa-house-user detail-icon"></i>
+                                <h3>Installation et Suivi</h3>
+                                <p>Aide à la recherche de logement, accueil à l'arrivée et suivi pédagogique tout au long de votre cursus.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-medical" class="tab-content">
+                        <div class="service-details-grid">
+                            <div class="detail-card">
+                                <div class="card-num">01</div>
+                                <i class="fa-solid fa-handshake-angle detail-icon"></i>
+                                <h3>Coordination avec Cliniques Spécialisées</h3>
+                                <p>Mise en relation avec les meilleurs établissements médicaux au Maroc et prise de rendez-vous rapides avec des spécialistes.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                            <div class="detail-card">
+                                <div class="card-num">02</div>
+                                <i class="fa-solid fa-plane-arrival detail-icon"></i>
+                                <h3>Accueil & Organisation complète du Séjour</h3>
+                                <p>Logistique de transport (ambulance, avion sanitaire), hébergement pour les accompagnants et gestion administrative.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                            <div class="detail-card">
+                                <div class="card-num">03</div>
+                                <i class="fa-solid fa-notes-medical detail-icon"></i>
+                                <h3>Accompagnement & Suivi Post-Opératoire</h3>
+                                <p>Assistance par un personnel dédié pendant l'hospitalisation et organisation des soins infirmiers après la sortie.</p>
+                                <a href="#contact" class="detail-link">En savoir plus →</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- Section Processus -->
+        <section id="process" class="process-section">
+            <div class="container">
+                <div class="process-header">
+                    <span class="process-tag">Comment ça marche ?</span>
+                    <h2 class="section-title">Un Parcours <span>Clair & Structuré</span></h2>
+                </div>
 
-        <section id="about" class="about-section">
-            <h2 class="section-title" data-i18n="about_title">À propos de nous</h2>
-            <p data-i18n="about_desc">
-                ITA Consulting est une entreprise dédiée à l'accompagnement
-                des étudiants africains dans leurs projets d'études à l'étranger
-                et à la facilitation de l'accès aux soins médicaux internationaux.
-                Notre mission est de fournir un soutien personnalisé pour aider nos clients
-                à atteindre leurs objectifs académiques et de santé.
-            </p>
+                <div class="process-timeline">
+                    <div class="line-track">
+                        <div class="line-fill"></div>
+                    </div>
+
+                    <div class="process-step" data-step="1">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <i class="fa-solid fa-comments"></i>
+                            <h3>Consultation Initiale</h3>
+                            <p>Un entretien approfondi pour comprendre vos objectifs, votre budget, vos contraintes académiques ou médicales et définir la meilleure approche pour vous.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="2">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <h3>Stratégie Personnalisée</h3>
+                            <p>Nos experts élaborent un plan d'action sur mesure — sélection des établissements, planning des démarches administratives et gestion des priorités.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="3">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <i class="fa-solid fa-gear"></i>
+                            <h3>Exécution & Suivi</h3>
+                            <p>Nous prenons en charge toutes les démarches — candidatures, visas, logistique médicale — et vous informons à chaque étape du processus.</p>
+                        </div>
+                    </div>
+                    <div class="process-step" data-step="4">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <i class="fa-solid fa-handshake"></i>
+                            <h3>Accompagnement Continu</h3>
+                            <p>Même après votre arrivée ou votre traitement, ITA Consulting reste à vos côtés pour garantir une intégration ou un rétablissement réussi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <a class="whatsapp-float"
+        href="https://wa.me/23674563406?text=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20services."
+        target="_blank"
+        rel="noreferrer"
+        >
+        <!-- <i class="fa-brands fa-whatsapp"></i> -->
+        WhatsApp
+    </a>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
