@@ -202,25 +202,7 @@ body {
     text-decoration: underline solid var(--green) space(1px);
 }
 
-/* ===== BUTTON ===== */
-.btn-contact {
-    background: linear-gradient(135deg, var(--green-bright), var(--green-dark));
-    color: var(--surface);
-    padding: 10px 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s;
-}
 
-/* .btn-contact:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 40px var(--green-glow-strong);
-    border-color: 4px solid var(--green);
-    color: var(--green);
-    background: transparent;
-    background-color: var(--surface)
-} */
 .hero-btn {
     display: inline-block;
     padding: 14px 32px;
