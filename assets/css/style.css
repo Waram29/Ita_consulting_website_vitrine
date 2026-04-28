@@ -1217,7 +1217,7 @@ body {
 /* --- Style de Carte (Vertical et Floating) --- */
 .dest-hero-card {
     position: relative;
-    height: 480px; /* Format vertical et fin */
+    height: 480px; 
     border-radius: 40px; 
     overflow: hidden;
     box-shadow: 0 15px 40px var(--shadow-light);
