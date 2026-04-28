@@ -1218,7 +1218,7 @@ body {
 .dest-hero-card {
     position: relative;
     height: 480px; /* Format vertical et fin */
-    border-radius: 40px; /* Arrondis très marqués du modèle */
+    border-radius: 40px; 
     overflow: hidden;
     box-shadow: 0 15px 40px var(--shadow-light);
     transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
