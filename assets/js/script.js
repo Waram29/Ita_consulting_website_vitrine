@@ -96,7 +96,6 @@ observer.observe(document.querySelector('.stats-section'));
 
 // ===== TABS Services =====
 function openTab(evt, tabName) {
-    // 1. Déclarer les variables
     var i, tabcontent, tablinks;
 
     // 2. Masquer tous les éléments avec la classe "tab-content"
@@ -134,7 +133,6 @@ window.addEventListener('scroll', () => {
     });
 
     // Calcul de la hauteur de la ligne verte
-    // (Nombre d'étapes actives - 0.5 pour ne pas dépasser la dernière bulle)
     const progress = ((activeSteps - 1) / (steps.length - 1)) * 100;
     lineFill.style.height = Math.max(0, progress) + "%";
 });
