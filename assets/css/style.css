@@ -1194,7 +1194,7 @@ body {
 }
 
 .dest-title span {
-    color: var(--navy); /* Ou var(--green) si tu préfères la couleur d'accent */
+    color: var(--navy);
 }
 
 .dest-subtitle {
