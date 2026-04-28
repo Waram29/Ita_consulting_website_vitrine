@@ -1208,9 +1208,9 @@ body {
 /* --- Grille de Cartes --- */
 .dest-hero-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1.9fr);
     gap: 25px;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
