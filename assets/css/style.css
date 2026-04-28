@@ -148,7 +148,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 18px;
+    padding: 0 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
@@ -1016,7 +1016,7 @@ body {
 }
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials-3d-section {
-    padding: 50px 0;
+    /* padding: 50px 0; */
     background: linear-gradient(to top, var(--azure-light), var(--surface));
     overflow: hidden;
 }
@@ -1168,7 +1168,7 @@ body {
 }
 /* ===== DESTINATIONS SECTION ===== */
 .destinations-hero-section {
-    padding: 80px 20px;
+    padding: 30px 20px;
     background: linear-gradient(to bottom, var(--azure-light), var(--surface));
     text-align: center;
 }
@@ -1269,13 +1269,13 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* --- Pied de section --- */
+/* --- Pied de section ---
 .dest-hero-footer {
     margin-top: 60px;
     font-size: 1rem;
     color: var(--text-muted);
     font-weight: 600;
-}
+} */
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1100px) {
