@@ -776,7 +776,7 @@ body {
     padding: 40px;
     border-radius: var(--radius);
     box-shadow: 0 10px 30px var(--shadow-light);
-    position: relative; /* Pour positionner le numéro */
+    position: relative; 
     transition: 0.3s;
     border: 1px solid transparent;
 }
@@ -895,7 +895,7 @@ body {
 /* Rail de la ligne (fond gris léger) */
 .line-track {
     position: absolute;
-    left: 21px; /* Aligné avec le centre des bulles */
+    left: 21px; 
     top: 0;
     width: 3px;
     height: 100%;
@@ -1338,7 +1338,7 @@ body {
     opacity: 1;
 }
 
-/* L'animation qui fait tout le travail */
+
 @keyframes scrollInfinite {
     0% {
         transform: translateX(0);
