@@ -137,8 +137,25 @@ window.addEventListener('scroll', () => {
     lineFill.style.height = Math.max(0, progress) + "%";
 });
 
-//  ==== SLIDER TESTIMONIALS =====
-// ==== SLIDER TESTIMONIALS (CORRIGÉ) =====
+// ===== ACCORDÉON FAQ =====
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Ferme les autres questions ouvertes
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
+
+        // Alterne l'état de la question cliquée
+        item.classList.toggle('active');
+    });
+});
+// ==== SLIDER TESTIMONIALS =====
 const trackTesti = document.getElementById('sliderTrack');
 const slidesTesti = document.querySelectorAll('.slide-3d'); // Renommé ici
 let currentIndex = Math.min(1, slidesTesti.length - 1);
