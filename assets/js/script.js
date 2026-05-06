@@ -192,3 +192,51 @@ window.addEventListener('load', updateSlider);
 
 // Petit délai pour s'assurer que le DOM est bien calculé avant le premier rendu
 setTimeout(updateSlider, 100);
+
+
+// ===== FORMULAIRE DE CONTACT =====
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const form = e.target;
+    const status = document.getElementById("formStatus");
+    const btnText = document.getElementById("btnText");
+    const data = new FormData(form);
+
+    // État de chargement
+    btnText.innerText = "Envoi en cours...";
+    form.querySelector('button').style.opacity = "0.7";
+    form.querySelector('button').disabled = true;
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            // Succès
+            status.style.display = "block";
+            status.style.color = "#28a745"; // Vert succès
+            status.innerText = "Merci ! Votre demande a été envoyée avec succès.";
+            form.reset(); // Réinitialise le formulaire
+        } else {
+            // Erreur serveur
+            throw new Error();
+        }
+    } catch (error) {
+        // Erreur réseau
+        status.style.display = "block";
+        status.style.color = "#dc3545"; // Rouge erreur
+        status.innerText = "Oups ! Une erreur est survenue lors de l'envoi.";
+    } finally {
+        // Rétablir le bouton
+        btnText.innerText = "Envoyer ma demande";
+        form.querySelector('button').style.opacity = "1";
+        form.querySelector('button').disabled = false;
+        
+        // Cacher le message après 5 secondes
+        setTimeout(() => { status.style.display = "none"; }, 5000);
+    }
+});

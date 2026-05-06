@@ -59,7 +59,7 @@
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Témoignages</a></li>
-                <li><a href="#destinations">Destination</a></li>
+                <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Button -->
@@ -274,15 +274,15 @@
                             <div class="detail-card">
                                 <div class="card-num">02</div>
                                 <i class="fa-solid fa-plane-arrival detail-icon"></i>
-                                <h3>Accueil & Organisation complète du Séjour</h3>
-                                <p>Logistique de transport (ambulance, avion sanitaire), hébergement pour les accompagnants et gestion administrative.</p>
+                                <h3>Logistique & Accueil VIP</h3>
+                                <p>De votre arrivée à l'aéroport jusqu'à votre installation, nous gérons tout : transport privé, hébergement de standing pour vos proches et formalités administratives simplifiées.</p>
                                 <a href="#contact" class="detail-link">En savoir plus →</a>
                             </div>
                             <div class="detail-card">
                                 <div class="card-num">03</div>
                                 <i class="fa-solid fa-notes-medical detail-icon"></i>
-                                <h3>Accompagnement & Suivi Post-Opératoire</h3>
-                                <p>Assistance par un personnel dédié pendant l'hospitalisation et organisation des soins infirmiers après la sortie.</p>
+                                <h3>Assistance Personnalisée 24/7</h3>
+                                <p>Ne soyez jamais seul. Un conseiller dédié accompagne patients et familles à chaque étape du parcours médical pour un suivi humain, rassurant et sur-mesure.</p>
                                 <a href="#contact" class="detail-link">En savoir plus →</a>
                             </div>
                         </div>
@@ -324,8 +324,8 @@
                         <div class="step-content">
                             <i class="fa-solid fa-gear"></i>
                             <h3>Exécution & Suivi</h3>
-                            <p>Nous prenons en charge toutes les démarches — candidatures, visas, logistique médicale — et vous informons à chaque étape du processus.</p>
-                        </div>
+                            <p>Nous prenons en charge toutes les démarches — candidatures, coordination avec les institutions, installation et vous informons à chaque étape du processus.</p>
+                        </div>  
                     </div>
                     <div class="process-step" data-step="4">
                         <div class="step-number">04</div>
@@ -363,7 +363,7 @@
                             <i class="fa-solid fa-plus"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Oui, nous facilitons l'accès aux soins au Maroc et en Tunisie. Nous gérons la prise de rendez-vous avec des spécialistes, l'accueil à l'aéroport et la logistique durant votre séjour.</p>
+                            <p>Oui, nous facilitons l'accès aux soins au Maroc. Nous gérons la prise de rendez-vous avec des spécialistes, l'accueil à l'aéroport et la logistique durant votre séjour.</p>
                         </div>
                     </div>
 
@@ -383,7 +383,7 @@
                             <i class="fa-solid fa-plus"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Nous avons une présence à Fès (Maroc) et nous intervenons également pour nos clients en République Centrafricaine et dans toute l'Afrique de l'Ouest.</p>
+                            <p>Nous avons une présence à Fès (Maroc) et nous intervenons également pour nos clients en République Centrafricaine et dans toutes nos destinations internationales.</p>
                         </div>
                     </div>
                 </div>
@@ -545,6 +545,7 @@
                 </div>
             </div>
         </section>
+        <!-- Section Contact -->
         <section id="contact" class="contact-section-premium">
             <div class="bg-pattern"></div> <div class="container">
                 <div class="contact-card-premium">
@@ -588,36 +589,38 @@
                     </div>
 
                     <div class="contact-form-panel-premium">
-                        <form action="#" id="contactForm">
+                        <form action="https://formspree.io/f/xrejkvbk" method="POST" id="contactForm">
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="name">Votre Nom</label>
-                                    <input type="text" id="name" placeholder="Ex: Aristide MOKE" required>
+                                    <input type="text" id="name" name="name" placeholder="Ex: Aristide MOKE" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Votre Email</label>
-                                    <input type="email" id="email" placeholder="nom@gmail.com" required>
+                                    <input type="email" id="email" name="email" placeholder="nom@gmail.com" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="service">Service souhaité</label>
-                                <select id="service" required>
+                                <select id="service" name="Service" required>
                                     <option value="" disabled selected>Choisissez une option</option>
-                                    <option value="etudes">Orientation & Études à l'étranger</option>
-                                    <option value="medical">Assistance Médicale</option>
+                                    <option value="Orientation & Études">Orientation & Études à l'étranger</option>
+                                    <option value="Assistance Médicale">Assistance Médicale</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Votre Projet</label>
-                                <textarea id="message" rows="4" placeholder="Expliquez-nous brièvement votre besoin..."></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Expliquez-nous brièvement votre besoin..." required></textarea>
                             </div>
-
                             <button type="submit" class="btn-submit-premium">
-                                <span>Envoyer ma demande</span>
+                                <span id="btnText">Envoyer ma demande</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
+                            
+                            <!-- Message de confirmation caché par défaut -->
+                            <div id="formStatus" style="margin-top: 15px; display: none; font-weight: 600;"></div>
                         </form>
                     </div>
 
@@ -650,8 +653,8 @@
                         <ul>
                             <li><a href="#services">Nos Services</a></li>
                             <li><a href="#destinations">Destinations</a></li>
-                            <li><a href="#">Témoignages</a></li>
-                            <li><a href="#">À Propos</a></li>
+                            <li><a href="#testimonials">Témoignages</a></li>
+                            <li><a href="#about">À Propos</a></li>
                             <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
@@ -662,15 +665,15 @@
                         <div class="contact-details">
                             <div class="contact-item">
                                 <i class="fa-brands fa-whatsapp"></i>
-                                <span>+236 74 56 34 06</span>
+                                <span><a class="cta-link" href="https://wa.me/23674563406" target="_blank" rel="noopener noreferrer">+236 74 56 34 06</a></span>
                             </div>
                             <div class="contact-item">
                                 <i class="fa-solid fa-phone"></i>
-                                <span>+236 72 64 78 54</span>
+                                <span><a class="cta-link" href="tel:+23672647854">+236 72 64 78 54</a></span>
                             </div>
                             <div class="contact-item">
                                 <i class="fa-solid fa-envelope"></i>
-                                <span>itaconsulting236@gmail.com</span>
+                                <span><a class="cta-link" href="mailto:itaconsulting236@gmail.com">itaconsulting236@gmail.com</a></span>
                             </div>
                             <div class="contact-item">
                                 <i class="fa-solid fa-location-dot"></i>
@@ -693,10 +696,10 @@
                 <div class="footer-studio-bottom">
                     <hr>
                     <div class="bottom-flex">
-                        <p>&copy; 2026 ITA Consulting Group. All rights reserved.</p>
-                        <div class="legal">
+                        <p>&copy; 2026 ITA Consulting. All rights reserved.</p>
+                        <!-- <div class="legal">
                             <a href="#">Creé par WARAM</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
