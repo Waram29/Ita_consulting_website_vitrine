@@ -277,3 +277,45 @@ button.addEventListener('mouseleave', function() {
 
 // Dans ton event listener de bouton :
 element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+
+
+/* ===== GESTION DU SWIPE POUR LE SLIDER 3D ===== */
+
+const sliderTrack = document.querySelector('.slider-3d-track');
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Seuil minimal pour éviter les déclenchements accidentels (en pixels)
+const swipeThreshold = 50; 
+
+sliderTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+sliderTrack.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance < 0) {
+            // Glissement vers la gauche -> Slide Suivant
+            if (typeof nextSlide === "function") {
+                nextSlide();
+            } else {
+                console.warn("La fonction nextSlide() n'est pas définie.");
+            }
+        } else {
+            // Glissement vers la droite -> Slide Précédent
+            if (typeof prevSlide === "function") {
+                prevSlide();
+            } else {
+                console.warn("La fonction prevSlide() n'est pas définie.");
+            }
+        }
+    }
+}

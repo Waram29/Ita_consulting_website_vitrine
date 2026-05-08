@@ -338,13 +338,6 @@ body {
 }
 
 /* ====RESPONSIVE NAVBAR==== */
-/* --- Très grands écrans (1920px+) --- */
-/* @media (min-width: 1920px) {
-    .navbar {
-        padding: 0 calc((100% - 1440px) / 2 + 50px);
-    }
-} */
-
 /* --- Desktop (max 1440px) --- */
 @media (max-width: 1440px) {
     .navbar { padding: 0 50px; }
@@ -1642,12 +1635,65 @@ body {
     font-weight: 800;
 }
 
+/* ===== RESPONSIVE : SECTION FAQ ===== */
+/* --- Tablettes & Laptop (max 1024px) --- */
+@media (max-width: 1024px) {
+    .faq-container {
+        max-width: 90%; /* On occupe plus de largeur sur tablette */
+        margin-top: 30px;
+    }
+}
+
+/* --- Mobile Standard (max 768px) --- */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 15px;
+    }
+
+    .faq-question {
+        padding: 20px; /* On réduit un peu le padding pour gagner de la place */
+        font-size: 1rem; /* Texte légèrement plus petit */
+    }
+
+    .faq-answer p {
+        padding: 0 20px 20px 20px; /* Aligné avec le padding de la question */
+        font-size: 0.95rem;
+    }
+
+    .faq-item {
+        margin-bottom: 15px; /* On resserre les items */
+    }
+}
+
+/* --- Petit Mobile (max 480px) --- */
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 40px 10px;
+    }
+
+    .faq-question {
+        padding: 18px 15px;
+        gap: 15px; /* Espace entre le texte et l'icône + */
+    }
+
+    .faq-question span {
+        line-height: 1.4; /* Évite que les lignes de texte ne se touchent */
+    }
+
+    .faq-answer p {
+        padding: 0 15px 20px 15px;
+        font-weight: 600; /* On réduit un peu le 800 pour plus de clarté sur petit écran */
+    }
+    
+    .faq-item.active .faq-answer {
+        max-height: 800px; /* Sécurité si la réponse est très longue sur mobile */
+    }
+}
 
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials-3d-section {
     padding: 50px 0;
     background: linear-gradient(to top, var(--azure-light), var(--surface));
-    /* background-color: var(--green-overlay); */
     overflow: hidden;
 }
 
@@ -1672,11 +1718,11 @@ body {
 
 .slider-3d-track {
     display: flex;
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .slide-3d {
-    min-width: 33.333%; /* Affiche 3 colonnes sur PC */
+    min-width: 33.333%;
     display: flex;
     justify-content: center;
     transition: all 0.6s ease;
@@ -1698,6 +1744,7 @@ body {
     box-shadow: 0 20px 40px var(--shadow-light);
     width: 90%;
     max-width: 400px;
+    font-style: italic;
     position: relative;
     text-align: center;
     border: 1px solid var(--green-border-soft);
@@ -1796,6 +1843,8 @@ body {
         left: calc(50% + 30px);
     }
 }
+
+
 /* ===== DESTINATIONS SECTION ===== */
 .destinations-hero-section {
     padding: 40px 20px;
@@ -1895,6 +1944,92 @@ body {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.5px;
+}
+/*===== RESPONSIVE : SECTION DESTINATIONS ===== */
+/* --- Tablettes (max 1024px) --- */
+@media (max-width: 1024px) {
+    .dest-hero-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes x 2 lignes */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .dest-hero-card {
+        height: 650px; /* On réduit légèrement la hauteur */
+    }
+
+    .dest-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Mobile Standard (max 768px) --- */
+@media (max-width: 768px) {
+    .destinations-hero-section {
+        padding: 60px 15px;
+    }
+
+    .dest-hero-header {
+        margin-bottom: 40px;
+    }
+
+    .dest-title {
+        font-size: 2.2rem;
+    }
+
+    .dest-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Option 1 : Garder 2 colonnes mais réduire la hauteur */
+    .dest-hero-grid {
+        grid-template-columns: 1fr; /* 1 colonne pour un impact maximum sur mobile */
+        gap: 30px;
+    }
+
+    .dest-hero-card {
+        height: 650px;
+        border-radius: 25px; /* On adoucit les coins sur mobile */
+    }
+
+    .dest-hero-content {
+        padding: 20px;
+    }
+
+    .dest-hero-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Petit Mobile (max 480px) --- */
+@media (max-width: 480px) {
+    /* Option 2 : Passer à 1 seule colonne pour un impact maximum */
+    .dest-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .dest-hero-card {
+        height: 500px; /* On redonne de la hauteur puisqu'elle prend toute la largeur */
+    }
+
+    .dest-title {
+        font-size: 1.8rem;
+    }
+
+    .decor-icon {
+        width: 50px;
+    }
+}
+
+/* --- Ajustement pour les écrans très étroits --- */
+@media (max-width: 360px) {
+    .dest-hero-grid { grid-template-columns: 1fr; }
+    .dest-hero-card {
+        height: 500px;
+    }
+
 }
 
 /* ===== PARTNERS SECTION ===== */
@@ -2196,6 +2331,89 @@ body {
 .circle-1 { width: 200px; height: 200px; bottom: -50px; right: -50px; }
 .circle-2 { width: 100px; height: 100px; top: -30px; left: -30px; }
 
+/*===== RESPONSIVE : SECTION CONTACT PREMIUM ===== */
+@media (max-width: 992px) {
+    .contact-card-premium { 
+        flex-direction: column;
+    }
+    .contact-info-panel-premium { 
+        margin: 0;
+        border-radius: 30px 30px 0 0;
+        padding: 50px 40px;
+    }
+    .contact-form-panel-premium { 
+        padding: 50px 40px;
+        border-radius: 0 0 30px 30px;
+    }
+    .form-grid { 
+        grid-template-columns: 1fr;
+    }
+    .contact-info-panel-premium h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section-premium {
+        padding: 80px 15px;
+    }
+    .contact-info-panel-premium { 
+        padding: 40px 30px;
+    }
+    .contact-form-panel-premium { 
+        padding: 40px 30px;
+    }
+    .contact-info-panel-premium h3 {
+        font-size: 1.8rem;
+    }
+    .info-content > p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section-premium {
+        padding: 60px 15px;
+    }
+    .contact-card-premium {
+        border-radius: 20px;
+    }
+    .contact-info-panel-premium { 
+        border-radius: 20px 20px 0 0;
+        padding: 35px 20px;
+    }
+    .contact-form-panel-premium { 
+        padding: 35px 20px;
+        border-radius: 0 0 20px 20px;
+    }
+    .contact-info-panel-premium h3 {
+        font-size: 1.5rem;
+    }
+    .tagline {
+        font-size: 0.7rem;
+    }
+    .info-details {
+        gap: 15px;
+    }
+    .info-item-group div,
+    .info-item {
+        font-size: 0.9rem;
+    }
+    .form-group label {
+        font-size: 0.75rem;
+    }
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 10px 3px;
+    }
+    .btn-submit-premium {
+        padding: 14px 28px;
+        font-size: 0.9rem;
+    }
+}
+
 /* ===== FOOTER ===== */
 .footer-studio {
     background-color: var(--green); 
@@ -2294,6 +2512,27 @@ body {
 .studio-col ul li a:hover {
     color: var(--gold);
 }
+.studio-col ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;       /* Supprime le décalage à gauche par défaut des navigateurs */
+    margin: 0;        /* Supprime les marges par défaut */
+    display: flex;
+    flex-direction: column; /* Aligne les li verticalement */
+    align-items: flex-start; /* Aligne tout à gauche */
+}
+
+.studio-col ul li {
+    margin-bottom: 12px; /* Espace entre les liens */
+    width: 100%;        /* Permet au lien de prendre toute la largeur si besoin */
+}
+
+/* Version Responsive : Centrage sur mobile */
+@media (max-width: 600px) {
+    .studio-col ul {
+        align-items: center; /* Centre les textes sur mobile si ton footer est centré */
+        text-align: center;
+    }
+}
 
 .contact-details p, address {
     font-size: 0.85rem;
@@ -2384,125 +2623,96 @@ body {
     text-decoration: none;
     color: #fff;
 }
+/* ==========================================
+   RESPONSIVE : FOOTER STUDIO
+   ========================================== */
 
+/* --- Tablette (max 992px) --- */
+@media (max-width: 992px) {
+    .footer-studio-flex {
+        display: grid; /* Correction : on passe en grid pour utiliser les colonnes */
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px;
+        padding: 0 40px;
+    }
+
+    .brand-info p {
+        max-width: 100%; /* Le texte prend toute la largeur de sa colonne */
+    }
+}
+
+/* --- Mobile Standard (max 768px) --- */
+@media (max-width: 768px) {
+    .footer-studio {
+        padding: 50px 20px 20px;
+    }
+
+    .footer-main-logo {
+        height: 90px; /* Logo un peu plus petit sur mobile */
+    }
+}
+
+/* --- Petit Mobile (max 600px) --- */
+@media (max-width: 600px) {
+    .footer-studio-flex {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        text-align: center; /* On centre tout pour l'équilibre visuel */
+        gap: 35px;
+    }
+
+    .logo-container {
+        justify-content: center; /* Centre le logo et le texte H3 */
+    }
+
+    .brand-info p {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.85rem;
+    }
+
+    .studio-socials {
+        justify-content: center; /* Centre les cercles sociaux */
+    }
+
+    .studio-col h4 {
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    .contact-item {
+        justify-content: center; /* Centre les infos de contact */
+    }
+
+    .newsletter-form {
+        max-width: 320px;
+        margin: 15px auto 0; /* Centre la barre de newsletter */
+    }
+
+    .bottom-flex {
+        gap: 10px;
+    }
+
+    .footer-studio-bottom p {
+        font-size: 0.7rem; /* Plus discret sur mobile */
+    }
+}
+
+/* --- Sécurité pour les formulaires sur iPhone (max 480px) --- */
+@media (max-width: 480px) {
+    .newsletter-form input {
+        font-size: 16px; /* Évite le zoom automatique sur iOS au clic */
+    }
+}
 
 /* Mobile */
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
     .footer-studio-flex { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 @media (max-width: 600px) {
     .footer-studio-flex { grid-template-columns: 1fr; }
     .bottom-flex { flex-direction: column; gap: 15px; text-align: center; }
-}
-
-
-/* Responsive */
-@media (max-width: 992px) {
-    .contact-card-premium { 
-        flex-direction: column;
-    }
-    .contact-info-panel-premium { 
-        margin: 0;
-        border-radius: 30px 30px 0 0;
-        padding: 50px 40px;
-    }
-    .contact-form-panel-premium { 
-        padding: 50px 40px;
-        border-radius: 0 0 30px 30px;
-    }
-    .form-grid { 
-        grid-template-columns: 1fr;
-    }
-    .contact-info-panel-premium h3 {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-section-premium {
-        padding: 80px 15px;
-    }
-    .contact-info-panel-premium { 
-        padding: 40px 30px;
-    }
-    .contact-form-panel-premium { 
-        padding: 40px 30px;
-    }
-    .contact-info-panel-premium h3 {
-        font-size: 1.8rem;
-    }
-    .info-content > p {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .contact-section-premium {
-        padding: 60px 15px;
-    }
-    .contact-card-premium {
-        border-radius: 20px;
-    }
-    .contact-info-panel-premium { 
-        border-radius: 20px 20px 0 0;
-        padding: 35px 20px;
-    }
-    .contact-form-panel-premium { 
-        padding: 35px 20px;
-        border-radius: 0 0 20px 20px;
-    }
-    .contact-info-panel-premium h3 {
-        font-size: 1.5rem;
-    }
-    .tagline {
-        font-size: 0.7rem;
-    }
-    .info-details {
-        gap: 15px;
-    }
-    .info-item-group div,
-    .info-item {
-        font-size: 0.9rem;
-    }
-    .form-group label {
-        font-size: 0.75rem;
-    }
-    .form-group input, 
-    .form-group select, 
-    .form-group textarea {
-        font-size: 0.95rem;
-        padding: 10px 3px;
-    }
-    .btn-submit-premium {
-        padding: 14px 28px;
-        font-size: 0.9rem;
-    }
-}
-
-
-/* --- Pied de section ---
-.dest-hero-footer {
-    margin-top: 60px;
-    font-size: 1rem;
-    color: var(--text-muted);
-    font-weight: 600;
 } */
 
-
-/* --- RESPONSIVE --- */
-@media (max-width: 1100px) {
-    .dest-hero-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .dest-title { font-size: 2.2rem; }
-    .dest-hero-grid { grid-template-columns: 1fr; }
-    .dest-hero-card { height: 650px; }
-    .dest-hero-card{ max-width: 100%;}
-}
 
 
 /* ===== WHATSAPP BUTTON ===== */
