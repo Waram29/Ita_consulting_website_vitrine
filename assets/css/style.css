@@ -2450,12 +2450,12 @@ body {
     object-fit: contain;
 }
 
-.logo-container h3 {
+/* .logo-container h3 {
     color: #fff;
     font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-}
+} */
 .brand-info{
     display: flex;
     justify-content: center;
@@ -2467,6 +2467,7 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
     max-width: 400px;
+    text-align: center;
 }
 
 .brand-info h3{
@@ -2474,6 +2475,7 @@ body {
     font-size: 2rem;
     margin: 0;
     padding: 0;
+    color: var(--white);
 }
 
 /* Réseaux Sociaux (Cercles discrets) */
